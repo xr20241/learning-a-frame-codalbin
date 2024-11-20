@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Component</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- <a-text
+            value="This is a text"
+            color="#f0f"
+            position="0 1.5 -2"
+        ></a-text> -->
+        <!-- Negate is to have a white text on the chosen color -->
+        <!-- Use MSDF font generator to create our own font -->
+        <a-entity
+            text = "
+                value: THIS IS A TEXT GENERATED WHITH A FRAME;
+                color: blue;
+                wrapCount: 11;
+                align: center;
+                negate: false;
+                font: ./font/custom-msdf.json;
+            "
+            position = "0 1.5 -2"
+            geometry = "
+                primitive: plane;
+                width: auto;
+                height: auto;
+            "
+            material = "color: #ccc"
+        ></a-entity>
+    </a-scene>
+</body>
+</html>
